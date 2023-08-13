@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj" />
-    <ProjectReference Include="..\EasyCash-DataAccessLayer\EasyCash-DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj">
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyCash-DataAccessLayer\EasyCash-DataAccessLayer.csproj">
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyCash-DtoLayer\EasyCash-DtoLayer.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
@@ -18,5 +23,26 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ValidationRules\" />
+    <None Remove="ValidationRules\AppRole-VR\" />
+    <None Remove="ValidationRules\AppUser-VR\" />
+    <None Remove="ValidationRules\CustomerAccount-VR\" />
+    <None Remove="ValidationRules\CustomerAccountProcess-VR\" />
+    <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+    <Folder Include="ValidationRules\AppRole-VR\" />
+    <Folder Include="ValidationRules\AppUser-VR\" />
+    <Folder Include="ValidationRules\CustomerAccount-VR\" />
+    <Folder Include="ValidationRules\CustomerAccountProcess-VR\" />
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
   </ItemGroup>
 </Project>

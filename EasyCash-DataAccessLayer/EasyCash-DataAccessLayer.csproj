@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj" />
+    <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj">
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
@@ -22,8 +24,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Concrete\" />
+    <None Remove="Abstract\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Concrete\" />
+    <Folder Include="Abstract\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

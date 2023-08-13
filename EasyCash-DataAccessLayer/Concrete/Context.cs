@@ -5,8 +5,8 @@ using EasyCash_EntityLayer.Concrete;
 
 namespace EasyCash_DataAccessLayer.Concrete
 {
-	public class Context : IdentityDbContext<AppUser,AppRole,int>
-	{
+	public class Context : IdentityDbContext<AppUser, AppRole, int>
+    {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost,1433;Database=EasyCash;User Id=SA;Password=reallyStrongPwd123;TrustServerCertificate=True;Encrypt=false;");

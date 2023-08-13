@@ -10,12 +10,15 @@
   <ItemGroup>
     <ProjectReference Include="..\EasyCash-BusinessLogicLayer\EasyCash-BusinessLogicLayer.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
     <ProjectReference Include="..\EasyCash-DataAccessLayer\EasyCash-DataAccessLayer.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
     <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -27,5 +30,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Register\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Register\" />
   </ItemGroup>
 </Project>

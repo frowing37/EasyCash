@@ -14,6 +14,8 @@ namespace EasyCash_EntityLayer.Concrete
         public string City { get; set; }
 
         public string ImageURL { get; set; }
+
+        public List<AppUser> CustomerAccounts { get; set; }
     }
 }
 

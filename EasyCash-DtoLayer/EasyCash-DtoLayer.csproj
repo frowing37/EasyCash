@@ -15,4 +15,21 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Dto%27s\" />
+    <None Remove="Dto%27s\AppUserDto%27s\" />
+    <None Remove="Dto%27s\AppRoleDto%27s\" />
+    <None Remove="Dto%27s\CustomerAccountDto%27s\" />
+    <None Remove="Dto%27s\CustomerAccountProcessDto%27s\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto%27s\" />
+    <Folder Include="Dto%27s\AppUserDto%27s\" />
+    <Folder Include="Dto%27s\AppRoleDto%27s\" />
+    <Folder Include="Dto%27s\CustomerAccountDto%27s\" />
+    <Folder Include="Dto%27s\CustomerAccountProcessDto%27s\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyCash-EntityLayer\EasyCash-EntityLayer.csproj" />
+  </ItemGroup>
 </Project>
