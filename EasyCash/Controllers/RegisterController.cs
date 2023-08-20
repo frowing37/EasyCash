@@ -18,13 +18,7 @@ namespace EasyCashPresantationLayer.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Index(AppUserRegisterDto appUserRegisterDto)
+        public async Task<IActionResult> Register(AppUserRegisterDto appUserRegisterDto)
         {
             if(ModelState.IsValid)
             {
@@ -33,7 +27,10 @@ namespace EasyCashPresantationLayer.Controllers
                     UserName = appUserRegisterDto.Username,
                     Name = appUserRegisterDto.Name,
                     Surname = appUserRegisterDto.Surname,
-                    Email = appUserRegisterDto.Email
+                    Email = appUserRegisterDto.Email,
+                    City = "Los Angaras",
+                    District = "defaultDistrict",
+                    ImageURL = "defaultImageurl"
                 };
                 var result = await _userManager.CreateAsync(appUser, appUserRegisterDto.Password);
 
@@ -41,8 +38,15 @@ namespace EasyCashPresantationLayer.Controllers
                 {
                     return RedirectToAction("Index", "ConfirmMail");
                 }
+                else
+                {
+                    foreach(var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
             }
-            return View();
+            return RedirectToAction("Login","Home",ModelState);
         }
     }
 }

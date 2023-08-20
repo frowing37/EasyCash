@@ -33,8 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Register\" />
+    <None Remove="Views\Shared\Icons\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Register\" />
+    <Folder Include="Views\Shared\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Shared\_Layout2.cshtml" />
   </ItemGroup>
 </Project>
