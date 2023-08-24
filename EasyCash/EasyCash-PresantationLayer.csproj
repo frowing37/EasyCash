@@ -30,14 +30,20 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="MailKit" Version="4.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Register\" />
     <None Remove="Views\Shared\Icons\" />
+    <None Remove="Views\ConfirmMail\" />
+    <None Remove="Views\MyProfile\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Register\" />
     <Folder Include="Views\Shared\Icons\" />
+    <Folder Include="Views\ConfirmMail\" />
+    <Folder Include="Views\MyProfile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Shared\_Layout2.cshtml" />
